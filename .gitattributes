@@ -1,0 +1,2 @@
+# Store every file byte-for-byte as it came from Google Drive (no line-ending conversion).
+* -text
