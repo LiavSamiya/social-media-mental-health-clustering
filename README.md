@@ -333,26 +333,6 @@ Back to the main question: *is a person's main platform and age linked to their 
 
 ---
 
-## 🗓 Project timeline
-
-| Date | Milestone | Material |
-|---|---|---|
-| **17.5.26** | Dataset choice and EDA | The data set |
-| **7.6.26** | Clustering milestone ("Advanced Clustering Techniques") | `clustering-7.6.26/` |
-| **28.6.26** | ⭐ Final report and presentation | `Final project - 28.6.26/` |
-
-**The second meeting (7.6.26) at a glance.** The full pipeline is in [`Clustering.ipynb`](clustering-7.6.26/Clustering.ipynb).
-- Compared **Manual reduction** (Digital Habits vs. Mental Strain indexes + platform columns) with **PCA-2**.
-  - On PCA-2, the Ward dendrogram has one dominant split at about 10 and a clear second split at about 6, which points to K = 3.
-  - K-Means, Hierarchical and GMM all agree on 3 well-separated clusters.
-  - DBSCAN over-splits the manual space (7 clusters) and under-splits PCA-2 (about 2 clusters).
-- Silhouette at K = 3: Hierarchical with Ward linkage ≈ 0.34 (single linkage chains almost everything into one cluster); GMM with full covariance ≈ 0.35 (also the lowest BIC). → GMM was preferred because it gives a confidence probability for every point.
-- The accompanying document ([`עותק של CLUSTERING`](clustering-7.6.26/)) answers the course's theory questions: unsupervised learning, distance measures, K-Means (assignment and update steps, spherical bias, local optima), hierarchical linkages and dendrograms, and DBSCAN. It also applies them to this project.
-
-These results led to the final project: we moved from PCA to **NMF** and used **GMM** as the main algorithm.
-
----
-
 ## ▶ How to run
 
 The notebook needs Python 3 and these packages:
